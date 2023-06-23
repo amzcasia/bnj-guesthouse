@@ -1,21 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
 import faq from '../helpers/faq.js'
 import house from '../assets/house.png'
 import caret from '../assets/caret.png'
 
 export default function FAQ() {
+    function FAQCard ({question,answer}){
+        const [showAnswer, setShowAnswer] = useState(false)
+
+        function toggleShowAnswer(){
+            setShowAnswer(!showAnswer)
+        }
+        
+        const caretClass = 'w-[30px] h-auto transition duration-100' + ( showAnswer ? ' rotate-180' : '')
+
+        return(
+            <div className='border-b-2 border-[#64330F]'>
+                <div className='flex items-center justify-between py-4 '>
+                    <div className='flex items-center gap-x-2 lg:gap-x-4  text-[#FFF5F5] w-full'>
+                        <img className='w-[40px] lg:w-[50px]' src={house} alt="house" />
+                        <span className='text-lg lg:text-2xl'>{question}</span>
+                        <span className='hidden'>{question}</span>
+                    </div>
+                    <button onClick={toggleShowAnswer} className='w-[30px] grid justify-items-center'>
+                        <img className={caretClass} src={caret} alt="caret" />
+                    </button>
+                </div>
+                { showAnswer && <div className='text-[#FFF5F5] text-base lg:text-2xl pl-[calc(40px+0.5rem)] lg:pl-[calc(50px+1rem)] font-extralight pb-4'>{answer}</div>}
+            </div>
+        )
+    }
+
     const faqMap = faq.map( (question,index) =>{
         return(
-            <div key={index} className='flex items-center justify-between py-4 gap-x-2 border-b-2 border-[#64330F]'>
-                <div key={index+10} className='flex items-center gap-x-2 lg:gap-x-4  text-[#FFF5F5]'>
-                    <img className='w-[40px] lg:w-[50px]' key={index+20} src={house} alt="house" />
-                    <span className='text-lg lg:text-2xl' key={index+30}>{question.question}</span>
-                    <span key={index+40} className='hidden'>{question.answer}</span>
-                </div>
-                <button className='w-[30px]' key={index+50}>
-                    <img className='w-full' key={index+60} src={caret} alt="caret" />
-                </button>
-            </div>
+            <FAQCard key={index} question={question.question} answer={question.answer}/>
         )
     })
 

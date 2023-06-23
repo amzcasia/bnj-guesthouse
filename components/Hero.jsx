@@ -1,13 +1,15 @@
 import heroBackground from '../assets/hero-background-image.png'
 
 export default function Hero(){
+    const bookingLink = "https://book-directonline.com/properties/%20BJGuesthous%20andToursdirect?locale=en&checkInDate=2023-06-23&checkOutDate=2023-06-24&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=PHP&trackPage=yes"
     return(
         <section className="relative text-primary h-screen bg-cover bg-center border px-[5%]"
         style={{backgroundImage: `url(${heroBackground})`}}>
 
             <div className="text-center bg-white px-12 lg:max-w-[550px] py-8 rounded-[13px] mt-[450px] mx-auto">
                 <p className="mb-6 text-3xl font-bold lg:text-4xl">Your Stay Made Simple</p>
-                <button className="px-6 py-2 text-2xl font-bold rounded-full lg:text-3xl bg-accent"><a href="#">BOOK NOW</a></button>
+                <button className="px-6 py-2 text-2xl font-bold rounded-full lg:text-3xl bg-accent">
+                    <a href={bookingLink}>BOOK NOW</a></button>
             </div>
             <div className="bg-[#FDF1D2] lg:flex justify-between mt-6 py-6 px-10 text-base gap-y-3 grid">
                 <div className="lg:text-2xl">
