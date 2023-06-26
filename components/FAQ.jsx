@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import faq from '../helpers/faq.js'
 import house from '../assets/house.png'
 import caret from '../assets/caret.png'
@@ -11,10 +11,12 @@ export default function FAQ() {
             setShowAnswer(!showAnswer)
         }
         
-        const caretClass = 'w-[30px] h-auto transition duration-100' + ( showAnswer ? ' rotate-180' : '')
+        const caretClass = 'w-[30px] h-auto transition duration-200' + ( showAnswer ? ' rotate-180' : '')
+
+        const animateAccordion = showAnswer ? 'scale-y-100 max-h-[100px]' : 'scale-y-0 max-h-0'
 
         return(
-            <div className='border-b-2 border-[#64330F]'>
+            <div className='border-t-2 border-[#64330F]'>
                 <div className='flex items-center justify-between py-4 '>
                     <div className='flex items-center gap-x-2 lg:gap-x-4  text-[#FFF5F5] w-full'>
                         <img className='w-[40px] lg:w-[50px]' src={house} alt="house" />
@@ -25,7 +27,7 @@ export default function FAQ() {
                         <img className={caretClass} src={caret} alt="caret" />
                     </button>
                 </div>
-                { showAnswer && <div className='text-[#FFF5F5] text-base lg:text-2xl pl-[calc(40px+0.5rem)] lg:pl-[calc(50px+1rem)] font-extralight pb-4'>{answer}</div>}
+                 <div className={`text-[#FFF5F5] text-base lg:text-2xl pl-[calc(40px+0.5rem)] lg:pl-[calc(50px+1rem)] font-extralight pb-4 transition-all duration-200 origin-top ${animateAccordion}`}>{answer}</div>
             </div>
         )
     }

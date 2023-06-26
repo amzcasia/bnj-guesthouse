@@ -6,7 +6,7 @@ import bell from '../assets/bell.png'
 
 export default function Connect() {
   return (
-    <section className='bb px-[5%] grid lg:grid-cols-12 py-16 bg-gradient-to-t lg:from-[#F7BA0A] lg:via-15% lg:via-white lg:to-white'>
+    <section className='px-[5%] grid lg:grid-cols-12 py-16 bg-gradient-to-t lg:from-[#F7BA0A] lg:via-15% lg:via-white lg:to-white'>
         <div className='grid content-center justify-items-center lg:col-span-3'>
             <div className='flex justify-center pb-4 gap-x-3'>
                 <div><img src={instagram} alt="instagram" /></div>
