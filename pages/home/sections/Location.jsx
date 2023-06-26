@@ -21,9 +21,9 @@ export default function Location() {
             <h1 className='text-3xl font-bold text-primary lg:text-5xl lg:w-[600px] lg:mx-auto '>LOCATION</h1>
         </div>
         
-        <div className='grid lg:grid-cols-2 gap-y-4'>
+        <div className='grid lg:grid-cols-2 gap-y-4 lg:gap-x-4'>
             <div className='flex items-center'>
-                <iframe src={location} className='mx-auto border-0 w-[300px] h-[300px] lg:w-[600px] lg:h-[450px]' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src={location} className='mx-auto border-0 w-[300px] h-[300px] md:w-[600px] md:h-[450px]' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
                 <h2 className='text-2xl lg:text-3xl'>We are conveniently located near . . .</h2>

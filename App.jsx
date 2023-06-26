@@ -9,7 +9,7 @@ import UnderConstruction from './pages/UnderConstruction';
 export default function App() {
   // const [currentPage, setCurrentPage] = useState({home:true, rooms:false})
 
-  const [currentPath, setCurrentPath] = useState("App Component");
+  
 
   function changePath(newPath){
     setCurrentPath(newPath)
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <Router>
-      <Header currentPath={currentPath} changePath={changePath}/>
+      <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/rooms" element={<UnderConstruction />} />
