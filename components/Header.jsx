@@ -39,7 +39,7 @@ export default function Header({currentPath,changePath}){
 
     return(
         <>
-        <div></div>
+        <div>Prod</div>
         <header className="text-primary px-[5%] py-3 lg:py-0 lg:h-[85px] flex items-center lg:justify-center sticky top-0 z-[10] bg-white drop-shadow-md">
             <nav className="flex content-center justify-between w-full grid-cols-2 bg-white lg:grid lg:grid-cols-3">
                 <ul className="hidden lg:flex items-center justify-between gap-x-[54px] text-primary-light text-lg">

@@ -17,8 +17,8 @@ export default function Home(){
         <main>
             <Hero />
             <About />
-            <Specials />
-            <Rooms />
+            {/* <Specials /> */}
+            {/* <Rooms /> */}
             <Amenities />
             <FAQ />
             <Location />
