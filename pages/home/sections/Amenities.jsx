@@ -1,8 +1,8 @@
 import React from 'react'
-import amenitiesImg from '../assets/amenities.png'
-import flower from '../assets/flower.png'
-import plant from '../assets/plant.png'
-import amenities from '../helpers/amenitiesList'
+import amenitiesImg from '../../../assets/amenities.png'
+import flower from '../../../assets/flower.png'
+import plant from '../../../assets/plant.png'
+import amenities from  '../../../helpers/amenitiesList'  //assets/amenitiesList'
 
 export default function Amenities() {
 

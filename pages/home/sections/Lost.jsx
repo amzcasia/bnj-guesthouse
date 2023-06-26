@@ -1,7 +1,7 @@
 import React from 'react'
-import peopleInCar from '../assets/peopleInCar.png'
-import pinMap from '../assets/pinMap.png'
-import beetle from '../assets/beetle.png'
+import peopleInCar from '../../../assets/peopleInCar.png'
+import pinMap from '../../../assets/pinMap.png'
+import beetle from '../../../assets/beetle.png'
 
 export default function Lost() {
   return (

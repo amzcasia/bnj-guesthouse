@@ -1,5 +1,5 @@
 import React from 'react'
-import locations from '../helpers/locationsList.js'
+import locations from '../../../helpers/locationsList.js'
 
 
 export default function Location() {

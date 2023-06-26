@@ -1,8 +1,8 @@
 import React from 'react'
-import instagram from '../assets/instagram.png'
-import tiktok from '../assets/tik-tok.png'
-import facebook from '../assets/facebook.png'
-import bell from '../assets/bell.png'
+import instagram from '../../../assets/instagram.png'
+import tiktok from '../../../assets/tik-tok.png'
+import facebook from '../../../assets/facebook.png'
+import bell from '../../../assets/bell.png'
 
 export default function Connect() {
   return (

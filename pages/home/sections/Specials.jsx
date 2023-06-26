@@ -1,7 +1,8 @@
 import React from 'react'
 import OfferCard from './SpecialsCard'
-import special1 from '../assets/special-1.png'
-import {offerCardContent} from '../helpers/offerCardContent.js'
+import special1 from '../../../assets/special-1.png'
+// import {offerCardContent} from '../../../helpers/offerCardContent.js'
+import {offerCardContent} from '../../../helpers/offerCardContent.js'
 
 export default function Specials() {
 

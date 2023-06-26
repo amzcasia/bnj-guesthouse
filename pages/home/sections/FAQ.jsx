@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
-import faq from '../helpers/faq.js'
-import house from '../assets/house.png'
-import caret from '../assets/caret.png'
+import faq from '../../../helpers/faq.js'
+import house from '../../../assets/house.png'
+import caret from '../../../assets/caret.png'
 
 export default function FAQ() {
     function FAQCard ({question,answer}){

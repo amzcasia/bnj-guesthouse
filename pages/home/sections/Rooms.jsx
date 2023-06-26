@@ -1,6 +1,6 @@
 import React from 'react'
 import RoomCard from './RoomCard'
-import roomTypes from '../helpers/roomTypes'
+import roomTypes from '../../../helpers/roomTypes'
 
 export default function Rooms() {
     const roomTypesMap = roomTypes.map ( (room,index) =>{

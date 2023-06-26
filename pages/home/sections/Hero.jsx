@@ -1,4 +1,5 @@
-import heroBackground from '../assets/hero-background-image.png'
+// import heroBackground from '../assets/hero-background-image.png'
+import heroBackground from '../../../assets/hero-background-image.png'
 
 export default function Hero(){
     const bookingLink = "https://book-directonline.com/properties/%20BJGuesthous%20andToursdirect?locale=en&checkInDate=2023-06-23&checkOutDate=2023-06-24&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=PHP&trackPage=yes"
