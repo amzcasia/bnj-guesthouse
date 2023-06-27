@@ -93,14 +93,14 @@ export default function Header(){
             </nav>
             {/* <MiniNavBar /> */}
             <nav className={`fixed top-[60px] bg-white w-full left-0 border-t-2 border-primary-light transition-transform origin-top duration-200  ${showMiniNav ? 'scale-y-100' : 'scale-y-0'}`}>
-                <ul className='px-[5%] pt-5 pb-10 grid gap-y-4 text-lg font-semibold'>
-                    <li><Link className='link-home'     onClick={ ()=>{toggleNav('home')}}     to="/">         HOME     </Link></li>
-                    <li><Link className='link-rooms'    onClick={ ()=>{toggleNav('rooms')}}    to="/rooms">    ROOMS    </Link></li>
-                    <li><Link className='link-rental'   onClick={ ()=>{toggleNav('rental')}}   to="/rentals">  RENTALS  </Link></li>
-                    <li><Link className='link-tours'    onClick={ ()=>{toggleNav('tours')}}    to="/tours">    TOURS    </Link></li>
-                    <li><Link className='link-venues'   onClick={ ()=>{toggleNav('venues')}}   to="/venues">   VENUES   </Link></li>
-                    <li><Link className='link-location' onClick={ ()=>{toggleNav('location')}} to="/location"> LOCATION </Link></li>
-                    <li><Link className='link-gallery'  onClick={ ()=>{toggleNav('gallery')}}  to="/gallery">  GALLERY  </Link></li> 
+                <ul className='px-[5%] pt-5 pb-10 grid text-lg font-semibold'>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('home')}}     to="/">         HOME     </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('rooms')}}    to="/rooms">    ROOMS    </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('rental')}}   to="/rentals">  RENTALS  </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('tours')}}    to="/tours">    TOURS    </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('venues')}}   to="/venues">   VENUES   </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('location')}} to="/location"> LOCATION </Link></li>
+                    <li className='py-2'><Link className='' onClick={ ()=>{toggleNav('gallery')}}  to="/gallery">  GALLERY  </Link></li> 
                 </ul>
             </nav>
         </header>

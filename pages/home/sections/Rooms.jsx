@@ -6,15 +6,21 @@ export default function Rooms() {
     const [cardIndex, setCardIndex] = useState(3)
     const [clientWidth, setClientWidth] = useState(window.innerWidth);
     let allowMove = useRef(true)
-
+    const MAX_INDEX = 8
+    const MIN_INDEX = 1
     useEffect(()=>{
         const handleResize = () => {
             setClientWidth(window.innerWidth);
         };
         window.addEventListener('resize', handleResize);
-
+        const INCREMENT_INTERVAL = 5000;
+        const cardAutoLoop =  setInterval(() => {
+            autoIncrement(1)
+        }, INCREMENT_INTERVAL); 
+        
         return () => {
             window.removeEventListener('resize', handleResize);
+            clearInterval(cardAutoLoop);
         };
     },[])
 
@@ -53,30 +59,30 @@ export default function Rooms() {
             transitionDuration: `${duration}ms`
         }
     }
-    function incrementCardIndex(increment){
-        const MAX_INDEX = 8
-        const MIN_INDEX = 1
-        if(cardIndex + increment >= MAX_INDEX){
-            setCardIndex(8)
-            setTimeout(() => {
-                setCardIndex(()=>{
-                    allowMove.current = false;
-                    return(2)
-                })
-            }, 301);
-        }else if( cardIndex + increment <= MIN_INDEX){
-            setCardIndex(1)
-            setTimeout(() => {
-                setCardIndex(()=>{
-                    allowMove.current = false;
-                    return(7)
-                })
-            }, 301);
-        }else{
-            setCardIndex( ()=>{ 
+
+    function autoIncrement(increment){
+        setCardIndex((prevCardIndex)=>{
+            if(prevCardIndex + increment >= MAX_INDEX){
+                setTimeout(() => {
+                    setCardIndex(()=>{
+                        allowMove.current = false;
+                        return(2)
+                    })
+                }, 301);
+                return(8)
+            }else if( prevCardIndex + increment <= MIN_INDEX){
+                setTimeout(() => {
+                    setCardIndex(()=>{
+                        allowMove.current = false;
+                        return(7)
+                    })
+                }, 301);
+                return(1)
+            }else{
                 allowMove.current = true;
-                return(cardIndex + increment)} )
-        }
+                return(prevCardIndex + increment)
+            }
+        });
     }
 
     return (
@@ -96,12 +102,12 @@ export default function Rooms() {
         </div>
         <div className='w-full overflow-hidden translate-y-[-50px] relative'>
             <button 
-                onClick={()=>incrementCardIndex(-1)}
+                onClick={()=>autoIncrement(-1)}
                 className='z-[9] w-10 h-10 rounded-full bg-primary-light absolute left-3 top-[50%] flex items-center justify-center text-white font-bold text-3xl'>
                 <span>{'<'}</span>
             </button>
             <button 
-                onClick={()=>incrementCardIndex(1)}
+                onClick={()=>autoIncrement(1)}
                 className='z-[9] w-10 h-10 rounded-full absolute right-3 top-[50%] flex items-center justify-center text-white font-bold text-3xl bg-primary-light'>
                 <span>{'>'}</span>
             </button>

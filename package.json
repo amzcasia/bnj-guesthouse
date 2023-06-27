@@ -10,7 +10,7 @@
     "preview": "vite preview --host",
     "tailwindcss": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "add": "git add -f dist",
-    "commit" : "git commit -m 'update build files'",
+    "commit" : "git commit -m update build files",
     "push" : "git push origin main"
   },
   "dependencies": {
