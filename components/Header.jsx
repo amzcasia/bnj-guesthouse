@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function Header(){
     const HOME = 1;
     const blankPath = { 
-        home:false, 
+        home: false, 
         rooms:false, 
         rentals:false,
         tours:false,
@@ -100,7 +100,7 @@ export default function Header(){
                     <li><Link className='link-tours'    onClick={ ()=>{toggleNav('tours')}}    to="/tours">    TOURS    </Link></li>
                     <li><Link className='link-venues'   onClick={ ()=>{toggleNav('venues')}}   to="/venues">   VENUES   </Link></li>
                     <li><Link className='link-location' onClick={ ()=>{toggleNav('location')}} to="/location"> LOCATION </Link></li>
-                    <li><Link className='link-gallery'  onClick={ ()=>{toggleNav('gallery')}}  to="/gallery">  GALLERY  </Link></li>
+                    <li><Link className='link-gallery'  onClick={ ()=>{toggleNav('gallery')}}  to="/gallery">  GALLERY  </Link></li> 
                 </ul>
             </nav>
         </header>

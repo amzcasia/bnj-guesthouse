@@ -10,15 +10,12 @@ export default function Specials() {
     let translateXClass = ''
 
     useEffect( ()=>{
-        console.log('invoke useEffect')
         translateXClass = `flex translate-x-[${translateX.new*(-400)}px]`
     },[])
 
     if( isMoving.current ){
-        console.log("not animated")
         translateXClass = `flex lg:translate-x-[${translateX.new*(-400)}px] translate-x-[${translateX.new*(-300)}px]`
     }else{
-        console.log("animated")
         translateXClass = `flex transition duration-300 lg:translate-x-[${translateX.new*(-400)}px] translate-x-[${translateX.new*(-300)}px]`
     }
 

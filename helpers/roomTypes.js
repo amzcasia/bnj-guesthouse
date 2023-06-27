@@ -30,5 +30,11 @@ export default [
         type: "Deluxe Room",
         adults: 3,
         beds: "1 Double & 1 Single"
+    },
+    {
+        image: image1,
+        type: "Deluxe Room",
+        adults: 3,
+        beds: "1 Double & 1 Single"
     }
 ]
