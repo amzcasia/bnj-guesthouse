@@ -40,7 +40,7 @@ export default function Header(){
      const highlight = 'border-b-accent'
 
     return(
-        <>
+        
         <header className="text-primary px-[5%] lg:py-0 lg:h-[85px] flex items-center lg:justify-center sticky top-0 z-[10] bg-white drop-shadow-md">
             <nav className="flex items-center content-center justify-between w-full grid-cols-2 py-3 bg-white lg:py-0 lg:grid lg:grid-cols-3">
                 <ul className="hidden grid-flow-col text-lg justify-items-center lg:grid text-primary-light">
@@ -94,18 +94,15 @@ export default function Header(){
             {/* <MiniNavBar /> */}
             <nav className={`fixed top-[60px] bg-white w-full left-0 border-t-2 border-primary-light transition-transform origin-top duration-200  ${showMiniNav ? 'scale-y-100' : 'scale-y-0'}`}>
                 <ul className='px-[5%] pt-5 pb-10 grid gap-y-4 text-lg font-semibold'>
-                    <li><Link className='link-home' onClick={ ()=>{toggleNav('home')}} to="/">HOME</Link></li>
-                    <li><Link className='link-rooms' onClick={ ()=>{toggleNav('rooms')}} to="/rooms">ROOMS</Link></li>
-                    <li><Link className='link-rental' onClick={ ()=>{toggleNav('rental')}} to="/rentals">RENTALS</Link></li>
-                    <li><Link className='link-tours' onClick={ ()=>{toggleNav('tours')}} to="/tours">TOURS</Link></li>
-                    <li><Link className='link-venues' onClick={ ()=>{toggleNav('venues')}} to="/venues">VENUES</Link></li>
-                    <li><Link className='link-location' onClick={ ()=>{toggleNav('location')}} to="/location">LOCATION</Link></li>
-                    <li><Link className='link-gallery' onClick={ ()=>{toggleNav('gallery')}} to="/gallery">GALLERY</Link></li>
+                    <li><Link className='link-home'     onClick={ ()=>{toggleNav('home')}}     to="/">         HOME     </Link></li>
+                    <li><Link className='link-rooms'    onClick={ ()=>{toggleNav('rooms')}}    to="/rooms">    ROOMS    </Link></li>
+                    <li><Link className='link-rental'   onClick={ ()=>{toggleNav('rental')}}   to="/rentals">  RENTALS  </Link></li>
+                    <li><Link className='link-tours'    onClick={ ()=>{toggleNav('tours')}}    to="/tours">    TOURS    </Link></li>
+                    <li><Link className='link-venues'   onClick={ ()=>{toggleNav('venues')}}   to="/venues">   VENUES   </Link></li>
+                    <li><Link className='link-location' onClick={ ()=>{toggleNav('location')}} to="/location"> LOCATION </Link></li>
+                    <li><Link className='link-gallery'  onClick={ ()=>{toggleNav('gallery')}}  to="/gallery">  GALLERY  </Link></li>
                 </ul>
             </nav>
-
         </header>
-        
-        </>
     )
 }
