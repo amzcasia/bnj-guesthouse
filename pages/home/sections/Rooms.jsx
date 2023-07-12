@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import RoomCard from './RoomCard'
-import roomTypes from '../../../helpers/roomTypes'
+import {roomTypes} from '../../../helpers/roomTypes.js'
 
 export default function Rooms() {
     const [cardIndex, setCardIndex] = useState(3)
@@ -18,6 +18,7 @@ export default function Rooms() {
             autoIncrement(1)
         }, INCREMENT_INTERVAL); 
         
+        
         return () => {
             window.removeEventListener('resize', handleResize);
             clearInterval(cardAutoLoop);
@@ -28,7 +29,7 @@ export default function Rooms() {
         return(
             <RoomCard 
                 key={index}
-                image={room.image}
+                image={room.roomImage}
                 type={room.type}
                 adults={room.adults}
                 beds={room.beds}
