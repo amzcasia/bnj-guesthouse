@@ -654,6 +654,10 @@ video {
   z-index: 8;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -931,6 +935,10 @@ video {
 
 .max-w-\[85\%\] {
   max-width: 85%;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
 }
 
 .shrink-0 {
@@ -1883,6 +1891,10 @@ video {
     grid-column: span 6 / span 6;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mx-\[15\%\] {
     margin-left: 15%;
     margin-right: 15%;
@@ -1967,6 +1979,10 @@ video {
 
   .lg\:max-w-\[600px\] {
     max-width: 600px;
+  }
+
+  .lg\:max-w-none {
+    max-width: none;
   }
 
   .lg\:translate-x-\[\$\{translateX\.new\*\(-400\)\}px\] {
@@ -2217,6 +2233,10 @@ video {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:justify-center {

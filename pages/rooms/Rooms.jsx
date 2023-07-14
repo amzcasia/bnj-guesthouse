@@ -67,7 +67,7 @@ export default function Rooms() {
             </div>
         </div>
 
-        <div className='bg-[#FFF5EE] pt-10'>
+        <div className='bg-[#FFF5EE] py-10'>
             <div className='relative flex justify-center lg:mx-[15%]'>
                 <div className='absolute w-full top-1/2 h-[2px] bg-primary-light'></div>
                 <span className='z-[1] px-3 text-2xl font-medium bg-[#FFF5EE] lg:text-3xl text-primary'>

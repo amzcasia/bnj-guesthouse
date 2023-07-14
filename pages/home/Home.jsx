@@ -23,7 +23,7 @@ export default function Home(){
             <FAQ />
             <Location />
             <Lost />
-            <Connect />
+            {/* <Connect /> */}
 
         </main>
     )
