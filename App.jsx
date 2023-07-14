@@ -20,7 +20,6 @@ export default function App() {
     <Router>
       <Header />
       <Routes>
-
         <Route path="/offers" element={<UnderConstruction />} />
         <Route path="/amenities" element={<UnderConstruction />} />
         <Route path="/" element={<Home />} />
@@ -30,8 +29,6 @@ export default function App() {
         <Route path="/tours" element={<UnderConstruction />} />
         <Route path="/venues" element={<UnderConstruction />} />
         <Route path="/rentals" element={<UnderConstruction />} />
-
-
       </Routes>
       <Footer />
     </Router>
