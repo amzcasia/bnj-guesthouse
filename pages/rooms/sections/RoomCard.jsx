@@ -1,13 +1,12 @@
 import {React, useState} from 'react'
 import ViewDetails from './ViewDetails'
+import ViewRoom from './ViewRoom'
 
 import headsIcon from '../../../assets/capacity.png'
 import bedIcon from '../../../assets/bed.png'
 import stairsIcon from '../../../assets/stairs.png'
 import rightArrow from '../../../assets/right-arrow.png'
 import rightArrowBlack from '../../../assets/right-arrow-black.png'
-
-
 
 export default function RoomCard({roomImage, roomType, capacity, beds, floor}) {
 
@@ -19,26 +18,17 @@ export default function RoomCard({roomImage, roomType, capacity, beds, floor}) {
     }
 
     function toggleShowRoom(){
-        setShowRoom(!showRoom)
+        setShowRoom((prevShowRoom)=>{
+            return (!prevShowRoom)
+        })
     }
 
-    const ViewRoom = () => {
-        return(
-            <div className='fixed top-0 left-0 w-screen h-screen z-[11]'>
-                <div className='absolute top-0 left-0 w-screen h-screen bg-black opacity-50' onClick={toggleShowRoom}></div>
-                <div className='relative w-full lg:w-1/2 bg-white lg:translate-x-[-50%] translate-y-[-50%] lg:left-1/2 top-1/2 aspect-video'>
-                    
-                    <button className='absolute top-0 right-0 w-5 h-5 font-semibold bg-white opacity-100' onClick={toggleShowRoom}>x</button>
+    //links to videos need to be added to allRooms.js helper fie
+    const videoLink="https://www.youtube-nocookie.com/embed/FDdtZfCui40"
 
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/FDdtZfCui40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        )
-    }
-    
     return (
     <div className='grid bg-white lg:grid-cols-10'>
-        {showRoom && <ViewRoom />}
+        {showRoom && <ViewRoom toggleShowRoom={toggleShowRoom} videoLink={videoLink}/>}
         <div className='lg:col-span-6'>
             <img className='w-full' src={roomImage} alt="" />
         </div>
@@ -67,12 +57,12 @@ export default function RoomCard({roomImage, roomType, capacity, beds, floor}) {
                         <p className='pl-5'>{floor}</p>
                     </div>
                 </div>
-                <div className='grid w-40 py-5 gap-y-4'>
-                    <button className='flex items-center px-2 py-1 text-xl font-semibold text-white rounded-md bg-primary-light gap-x-2' onClick={toggleShowRoom}>
+                <div className='w-[11rem] py-5'>
+                    <button className='flex items-center justify-between w-full px-4 py-1 text-xl font-semibold text-white rounded-md bg-primary-light gap-x-2' onClick={toggleShowRoom}>
                         <img className='w-4 h-4' src={rightArrow} alt="rightArrow" />
                         <span>VIEW ROOM</span>
                     </button>
-                    <button className='flex items-center px-2 py-1 text-xl font-semibold rounded-md bg-accent gap-x-2'>
+                    <button className='flex items-center justify-between w-full px-4 py-1 mt-4 text-xl font-semibold rounded-md bg-accent gap-x-2'>
                         <img className='w-4 h-4' src={rightArrowBlack} alt="rightArrowBlack" />
                         <span>BOOK NOW</span>
                     </button>

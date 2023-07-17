@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './pages/home/Home'
 import Rooms from './pages/rooms/Rooms'
 import Footer from './components/Footer'
+import Tours from './pages/tours/Tours';
 import UnderConstruction from './pages/UnderConstruction';
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
         <Route path="/gallery" element={<UnderConstruction />} />
         <Route path="/infos" element={<UnderConstruction />} />
         <Route path="/rooms" element={<Rooms />} />
-        <Route path="/tours" element={<UnderConstruction />} />
+        <Route path="/tours" element={<Tours />} />
         <Route path="/venues" element={<UnderConstruction />} />
         <Route path="/rentals" element={<UnderConstruction />} />
       </Routes>

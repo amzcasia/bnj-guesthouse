@@ -23,7 +23,7 @@ export default function Rooms() {
 
     return (
     <main>
-        <div className='h-[40vh] bg-cover bg-center flex items-center justify-center' 
+        <div className='h-[33vh] bg-cover bg-center flex items-center justify-center' 
             style={{backgroundImage: `url(${heroBackground})`}}>
             <p className='text-2xl font-bold lg:text-3xl text-primary'>ROOMS & ADD-ONS</p>
         </div>

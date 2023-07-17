@@ -13,7 +13,7 @@ export default function ViewDetails() {
                 <div className='w-10 h-10'>
                     <img src={airconIcon} alt="aircon icon" />
                 </div>
-                <span className='font-semibold'>AIR CONIDITONING</span>
+                <span className='font-semibold'>AIR CONDITONING</span>
             </li>
             <li className='flex gap-x-4'>
                 <div className='w-10 h-10'>
@@ -40,49 +40,37 @@ export default function ViewDetails() {
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                    Private Toilets
-                </span>
+                <span>Private Toilets</span>
             </li>
             <li className='flex items-center gap-x-3'>
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                    Complimentary Toiletries
-                </span>
+                <span>Complimentary Toiletries</span>
             </li>
             <li className='flex items-center gap-x-3'>
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                    Workspace / Desk
-                </span>
+                <span>Workspace / Desk</span>
             </li>
             <li className='flex items-center gap-x-3'>
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                Closet
-                </span>
+                <span>Closet</span>
             </li>
             <li className='flex items-center gap-x-3'>
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                    Electric Kettle
-                </span>
+                <span>Electric Kettle</span>
             </li>
             <li className='flex items-center gap-x-3'>
                 <div>
                     <img src={checkMark} alt="check-mark" />
                 </div>
-                <span>
-                    Mugs, Saucers, Teaspoons
-                </span>
+                <span>Mugs, Saucers, Teaspoons</span>
             </li>
         </ul>
     </div>
