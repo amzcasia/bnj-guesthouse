@@ -3,8 +3,10 @@ import toursHero from '../../assets/tours-hero.png'
 import checkMark from '../../assets/check-mark-2.png'
 import threePeople from '../../assets/ellipse-15.png'
 import TourCard from './sections/TourCard'
+import TourSteps from './sections/TourSteps'
 
 import {tourList} from '../../helpers/tourList.js'
+import TourPhotos from './sections/TourPhotos'
 
 
 export default function Tours() {
@@ -67,7 +69,7 @@ export default function Tours() {
                 </div>
             </div>
         </section>
-        <section className='bg-secondary lg:px-[15%]'>
+        <section className='bg-secondary lg:px-[15%] pb-20'>
             <div className='relative grid justify-center py-10'>
                 {/* <div className='absolute bottom-0 left-0 w-full h-[10px] bg-secondary bb'></div> */}
                 <h2 className='relative text-xl font-bold text-primary lg:text-2xl'>PLAN YOUR BOHOL TRIP</h2>
@@ -77,7 +79,8 @@ export default function Tours() {
             </div>
             
         </section>
-
+        <TourSteps />
+        <TourPhotos />
     </main>
   )
 }

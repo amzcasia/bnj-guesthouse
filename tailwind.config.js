@@ -18,7 +18,8 @@ export default {
           },
           secondary: {
             DEFAULT: '#FFF5EE'
-          }
+          },
+          offwhite: '#D9D9D9'
           
         }
       },
