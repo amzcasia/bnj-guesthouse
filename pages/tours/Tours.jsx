@@ -4,9 +4,11 @@ import checkMark from '../../assets/check-mark-2.png'
 import threePeople from '../../assets/ellipse-15.png'
 import TourCard from './sections/TourCard'
 import TourSteps from './sections/TourSteps'
+import TourPhotos from './sections/TourPhotos'
 
 import {tourList} from '../../helpers/tourList.js'
-import TourPhotos from './sections/TourPhotos'
+import rightArrowBlack from '../../assets/right-arrow-black.png'
+
 
 
 export default function Tours() {

@@ -21,6 +21,10 @@ const tourPhotos = [
         description:"5",
         image: tourPhoto1
     },
+    {
+        description:"6",
+        image: tourPhoto1
+    }
 
 ]
 
