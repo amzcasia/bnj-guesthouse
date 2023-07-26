@@ -5,51 +5,40 @@ import carIcon from '../../../assets/car.png'
 import mapPersonIcon from '../../../assets/map-person.png'
 import balloonIcon from '../../../assets/balloon.png'
 import carKeyIcon from '../../../assets/car-key.png'
+import AddOnCard from './AddOnCard'
 
 
 export default function AddOns() {
+const addOns = ['Pre-Planned Tours','Rentals', 'Filipino Breakfast', 'Meetings and Events', 'Airport and Pier Transfers']
+
+    const addOnsMap = addOns.map( (item)=>{
+        return(
+            <AddOnCard addOnName={item} key={item} />
+        )
+    })
+
   return (
-    <section className='bg-primary lg:px-[15%]'>
-        <div className='flex justify-center pt-10'>
-            <p className='text-2xl font-semibold tracking-widest text-center lg:text-3xl'>
-                <span className='text-white'>COMPLETE YOUR STAY WITH&nbsp;</span>
-                <span className='text-accent'>ADD-ONS</span>
-            </p>
+    <section className='bg-primary lg:pl-[5%] flex text-white '>
+        <div className='grid grid-cols-1 lg:grid-cols-12'>
+            <div className='flex items-center col-span-1 lg:col-span-5'>
+                <h1 className='px-3 text-2xl font-semibold tracking-wides lg:text-3xl'>
+                    COMPLETE YOUR STAY <br />WITH <span className='text-accent'>ADD-ONS</span>
+                </h1>
+            </div>
+            <div className='lg:col-span-7'>
+                <div className='flex overflow-x-scroll'>
+                    <ul className='flex text-gray-300'>
+                        {/* <li className='w-[300px] bw'>Pre-Planned Tours</li>
+                        <li className='w-[300px] bw'>Rentals</li>
+                        <li className='w-[300px] bw'>Filipino Breakfast</li>
+                        <li className='w-[300px] bw'>Meetings & Events</li>
+                        <li className='w-[300px] bw'>Airport & Pier Transfers</li> */}
+                        {addOnsMap}
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <ul className='grid grid-cols-2 py-10 text-xl text-center text-white lg:grid-cols-6 gap-y-5'>
-            <li className='grid justify-items-center gap-y-2 lg:col-span-2'>
-                <div className='lg:max-w-none max-w-[100px]'>
-                    <img src={breakfastIcon} alt="breakfast Icon" />
-                </div>
-                <p>Filipino Breakfast</p>
-            </li>
-            <li className='grid justify-items-center gap-y-2 lg:col-span-2'>
-                <div className='lg:max-w-none max-w-[100px]'>
-                    <img src={carIcon} alt="carIcon" />
-                </div>
-                <p>Airport & Pier Transfers</p>
-            </li>
-            <li className='grid justify-items-center gap-y-2 lg:col-span-2'>
-                <div className='lg:max-w-none max-w-[100px]'>
-                    <img src={mapPersonIcon} alt="mapPerson Icon" />
-                </div>
-                <p>Pre-Planned Tours</p>
-            </li>
-        {/* </ul>
-        <ul className='grid pt-10 text-xl text-white lg:grid-cols-2 lg:px-[10%] gap-y-4'> */}
-            <li className='grid justify-items-center gap-y-2 lg:col-span-3'>
-                <div className='lg:max-w-none max-w-[100px]'>
-                    <img src={balloonIcon} alt="balloon Icon" />
-                </div>
-                <p>Venues</p>
-            </li>
-            <li className='grid col-span-2 justify-items-center gap-y-2 lg:col-span-3'>
-                <div className='lg:max-w-none max-w-[100px]'>
-                    <img src={carKeyIcon} alt="carKey Icon" />
-                </div>
-                <p>Car Rentals</p>
-            </li>
-        </ul>
     </section>
   )
 }
