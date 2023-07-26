@@ -7,7 +7,6 @@ import TourSteps from './sections/TourSteps'
 import TourPhotos from './sections/TourPhotos'
 
 import {tourList} from '../../helpers/tourList.js'
-import rightArrowBlack from '../../assets/right-arrow-black.png'
 
 
 

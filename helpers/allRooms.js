@@ -49,21 +49,24 @@ const allRooms = [
         roomType: "DORM FOR 6",
         capacity: "6",
         beds: "3 Bunk Beds",
-        floor: "1st Floor"
+        floor: "1st Floor",
+        cols: 3
     },
     {
         roomImage: sampleRoom,
         roomType: "DORM FOR 10",
         capacity: "10",
         beds: "5 Bunk Beds",
-        floor: "2nd Floor"
+        floor: "2nd Floor",
+        cols: 3
     },
     {
         roomImage: sampleRoom,
         roomType: "DORM FOR 12",
         capacity: "12",
         beds: "6 Bunk Beds",
-        floor: "2nd Floor"
+        floor: "2nd Floor",
+        cols: 3
     },
     
 ]

@@ -5,6 +5,7 @@ import AddOns from './sections/AddOns'
 
 import heroBackground from '../../assets/hero-background-image.png'
 import {allRooms} from '../../helpers/allRooms.js'
+import Essentials from './sections/Essentials'
 
 
 export default function Rooms() {
@@ -17,6 +18,7 @@ export default function Rooms() {
                 capacity={room.capacity}
                 beds={room.beds}
                 floor={room.floor}
+                cols={room.cols}
             />
         )
     })
@@ -35,7 +37,7 @@ export default function Rooms() {
                     STANDARD ROOMS
                 </span>
             </div>
-            <div className='lg:mx-[15%] mt-5 grid gap-y-8'>
+            <div className='lg:mx-[15%] mt-5 grid gap-y-8 lg:grid-cols-2 gap-x-4'>
                 {roomTypesMap[0]}
                 {roomTypesMap[1]}
             </div>
@@ -48,7 +50,7 @@ export default function Rooms() {
                     DELUXE ROOMS
                     </span>
             </div>
-            <div className='lg:mx-[15%] mt-5 grid gap-y-8'>
+            <div className='lg:mx-[15%] mt-5 grid gap-y-8 lg:grid-cols-2 gap-x-4'>
                 {roomTypesMap[2]}
                 {roomTypesMap[3]}
             </div>
@@ -61,7 +63,7 @@ export default function Rooms() {
                     FAMILY ROOMS
                 </span>
             </div>
-            <div className='lg:mx-[15%] mt-5 grid gap-y-8'>
+            <div className='lg:mx-[15%] mt-5 grid gap-y-8 lg:grid-cols-2 gap-x-4'>
                 {roomTypesMap[4]}
                 {roomTypesMap[5]}
             </div>
@@ -74,12 +76,13 @@ export default function Rooms() {
                     DORM ROOMS
                 </span>
             </div>
-            <div className='lg:mx-[15%] mt-5 grid gap-y-8'>
+            <div className='lg:mx-[15%] mt-5 grid gap-y-8 lg:grid-cols-3 gap-x-2'>
                 {roomTypesMap[6]}
                 {roomTypesMap[7]}
                 {roomTypesMap[8]}
             </div>
         </div>
+        <Essentials />
         <AddOns />
     </main>
     )

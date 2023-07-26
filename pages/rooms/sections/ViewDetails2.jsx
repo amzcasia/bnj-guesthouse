@@ -2,7 +2,7 @@ import React from 'react'
 import airconIcon from '../../../assets/amenity1.png'
 import checkMark from '../../../assets/check-mark.png'
 
-export default function ViewDetails({cols}) {
+export default function ViewDetails2({cols}) {
     let group1 = 2
     if (cols === 3){
         group1 = 1;

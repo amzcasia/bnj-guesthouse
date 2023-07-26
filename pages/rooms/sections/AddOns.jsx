@@ -9,7 +9,7 @@ import carKeyIcon from '../../../assets/car-key.png'
 
 export default function AddOns() {
   return (
-    <div className='bg-primary lg:px-[15%]'>
+    <section className='bg-primary lg:px-[15%]'>
         <div className='flex justify-center pt-10'>
             <p className='text-2xl font-semibold tracking-widest text-center lg:text-3xl'>
                 <span className='text-white'>COMPLETE YOUR STAY WITH&nbsp;</span>
@@ -50,6 +50,6 @@ export default function AddOns() {
                 <p>Car Rentals</p>
             </li>
         </ul>
-    </div>
+    </section>
   )
 }
