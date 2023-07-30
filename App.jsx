@@ -7,6 +7,7 @@ import Rooms from './pages/rooms/Rooms'
 import Footer from './components/Footer'
 import Tours from './pages/tours/Tours';
 import UnderConstruction from './pages/UnderConstruction';
+import BookingEngine from './pages/booking/BookingEngine';
 
 export default function App() {
   // const [currentPage, setCurrentPage] = useState({home:true, rooms:false})
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/venues" element={<UnderConstruction />} />
         <Route path="/rentals" element={<UnderConstruction />} />
+        <Route path="/booking" element={<BookingEngine />} />
       </Routes>
       <Footer />
     </Router>

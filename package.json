@@ -10,11 +10,12 @@
     "preview": "vite preview --host",
     "tailwindcss": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "add": "git add -f dist",
-    "commit" : "git commit -m update build files",
-    "push" : "git push origin main"
+    "commit": "git commit -m update build files",
+    "push": "git push origin main"
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0"
   },
