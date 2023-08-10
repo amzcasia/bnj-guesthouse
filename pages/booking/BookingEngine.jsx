@@ -16,7 +16,7 @@ export default function BookingEngine() {
   })
 
   useEffect( ()=>{
-    const url = 'https://app-apac.thebookingbutton.com/api/v1/properties/%20BJGuesthous%20andToursdirect/rates.json'
+    const url = 'https://app-apac.thebookingbutton.com/api/v1/properties/%20BJGuesthous%20andToursdirect/rates.json?start_date=2023-09-01&end_date=2023-10-01'
 
     // async function fetchData() {
       fetch(url)
