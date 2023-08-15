@@ -28,7 +28,7 @@ export default function TourCard({tourTitle}) {
             <img className='' src={chocolateHills} alt="chocolateHills" />
         </div>
         <div className='grid px-4 justify-items-center gap-y-2'>
-            <h3 className='text-xl font-bold lg:text-2xl'>
+            <h3 className='pt-4 text-xl font-bold lg:text-2xl'>
                 {tourTitle}
             </h3>
             <p className='text-lg text-center'>

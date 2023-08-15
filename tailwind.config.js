@@ -21,6 +21,15 @@ export default {
           },
           offwhite: '#D9D9D9'
           
+        },
+        animation:{
+          'rightToLeft': 'rightToLeft 3s linear infinite' 
+        },
+        keyframes: {
+          rightToLeft:{
+            '0%':{transform:'translate(0)'},
+            '100%': {transform: 'translate(-1300px)'}
+          }
         }
       },
     },
